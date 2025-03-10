@@ -167,7 +167,7 @@ we've got the information/IPs we need; now, we can use them to find a rough loca
 
 in azure's dashboard, go to Microsoft Sentinel and the instance of it you've attached to your workgroup (if Microsoft Sentinel isn't there, search it at the top again). once it's open, on the sidebar, under Configuration, go to Watchlist.
 
-create a new watchlist; for the name and alias, name it `geoip`, or whatever else you'd like. keep in mind that for later purposes, this name is ~cAsE sEnSiTiVe~!
+create a new watchlist; for the name and alias, name it `geoip`, or whatever else you'd like. keep in mind that for later purposes, this name is `~cAsE sEnSiTiVe~`!
 
 under source, you'll be given a choice to upload a csv with a header. this is where we'll upload the data needed for geoIP data; but we don't have that data!
 you can grab the relevant .csv required from [here](https://github.com/joshmadakor1/Cyber-Course-v2/blob/main/Sentinel-Maps(JSON)/geoip-summarized.csv).
