@@ -216,13 +216,13 @@ friendly_location = strcat(cityname, " (", countryname, ")");
 
 this is very similar to the query shown before, but adds some aditional lines for the purposes of specifically cleaning up and sorting data for the map in particular, including summarizing attempts that match. run the query; you should get a bunch of data on the map, but it doesn't look quite right just yet -- the login labels below the numbers don't make sense!
 
-[image](./imgs/map-incomplete.png)
+![image](./imgs/map-incomplete.png)
 
 this is because we still need to change up one of the settings of the map to suit our data; the map settings should have opened to the right to the indicate this, but you can click Map Settings to show the window if it hasn't appeared.
 
 scroll to the bottom; under Metric Settings, you should see an option labeled Metric Label that is set to `None...` -- change it from that, to `friendly_location`, then click Apply. after that, your labels should make a lot more sense!
 
-[image](./imgs/map-complete.png)
+![image](./imgs/map-complete.png)
 
 now, you've got a (mostly) accurate map of everywhere your VM is receiving failed login attempts from; this might be small, at first, especially in the first few hours of your machine being public, but after 24 hours, your map should look a lot like the above! if you'd like, you can change the color palette of your map (Green from Red, by default, works fine, though)
 
