@@ -4,7 +4,7 @@ recently, i've been interested in getting into SOC work, so i decided to work on
 
 the project in particular is a 'honeypot' of sorts; specifically, to monitor login attempts made on a virtual machine, and to see where they're coming from.
 
-## Section 1: making a microsoft azure account
+## section 1: making a microsoft azure account
 
 if it's your first time making a Microsoft Azure account, you can get a free trial for 30 days, giving you about $200 worth of credits to use within those 30 days, and no charge to your credit card (with the exception of a like $1 authorization charge that gets reversed). this works just fine for something like this, since you don't really need to do too much or even 'pay' too much for something like this.
 
@@ -108,7 +108,7 @@ set the name to something that makes it very clear what this rule does; personal
 
 add the rule, and we're basically done opening the virtual machine to the internet; anything can connect to this now. how horrible (good)!
 
-### section 4: microsoft sentinel setup
+## section 4: microsoft sentinel setup
 
 to actually monitor attempts made to login to our system, we need to make both a log analytics workspace (LAW), enable microsoft sentinel, and configure both properly.
 
@@ -134,7 +134,7 @@ under Collect, you can change the event type to stream from All Security Events 
 
 when everything's configured, create the data collection rule. it will take some time for it to properly sync up with your VM and fully create itself. to check progress, you can head to your virtual machine's page, and under Settings -> Extensions + applications in the sidebar, you can watch the status of the agent it installed for this purpose to see if it's ready. if it says `Provisioning succeeded`, it's ready for use, and we're ready to log!
 
-### section 5: querying security events
+## section 5: querying security events
 
 we've got everything setup for being able to view our logs in azure; head over to your logs analytics workspace on the dashboard, then go to Logs in the sidebar.
 
