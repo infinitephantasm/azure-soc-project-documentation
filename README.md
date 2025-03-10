@@ -204,7 +204,7 @@ click Add, then click Add query; this should add a box with a lot of options. by
 
 now, in the Query field, copy/paste the following;
 ```
-let geoIPDB = _GetWatchlist("geoIP");
+let geoIPDB = _GetWatchlist("[watchlistname]");
 let WindowsEvents = SecurityEvent;
 WindowsEvents | where EventID == 4625
 | order by TimeGenerated desc
@@ -214,7 +214,7 @@ WindowsEvents | where EventID == 4625
 friendly_location = strcat(cityname, " (", countryname, ")");
 ```
 
-this is very similar to the query shown before, but adds some aditional lines for the purposes of specifically cleaning up and sorting data for the map in particular, including summarizing attempts that match. run the query; you should get a bunch of data on the map, but it doesn't look quite right just yet -- the login labels below the numbers don't make sense!
+this is very similar to the query shown before, but adds some aditional lines for the purposes of specifically cleaning up and sorting data for the map in particular, including summarizing attempts that match. like before, replace `[watchlistname]` with your watchlist's name. when you're done, run the query; you should get a bunch of data on the map, but it doesn't look quite right just yet -- the login labels below the numbers don't make sense!
 
 ![image](./imgs/map-incomplete.png)
 
